@@ -480,6 +480,9 @@ app.get('/me', function (req, res) {
         });
     }
 });
+var folder = require("./lib/folder.js");
+// list notes by folderId
+app.get("/folders/notes/:folderId", folder.listNotes);
 
 //upload image
 app.post('/uploadimage', function (req, res) {
