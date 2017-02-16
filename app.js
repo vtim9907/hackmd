@@ -483,6 +483,8 @@ app.get('/me', function (req, res) {
 var folder = require("./lib/folder.js");
 // list notes by folderId
 app.get("/folders/notes/:folderId", folder.listNotes);
+// search folders and notes by keyword
+app.get("/search/:keyword", folder.searchKeyword);
 
 //upload image
 app.post('/uploadimage', function (req, res) {
