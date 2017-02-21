@@ -489,6 +489,8 @@ app.get("/search/:keyword", folder.searchKeyword);
 app.get("/folders/:folderId/rename/:folderName", folder.rename);
 // list folders by userId
 app.get("/folders", folder.listAllFolders);
+// edit folderId of note
+app.get("/:noteId/move/:folderId", folder.moveNote);
 
 //upload image
 app.post('/uploadimage', function (req, res) {
